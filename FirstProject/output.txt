@@ -1,0 +1,1 @@
+This text serves as a sample for a test scenario. Its purpose is to provide a basic example for various testing methodologies, particularly focusing on testing the functionality of text processing software

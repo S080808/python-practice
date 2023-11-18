@@ -1,7 +1,7 @@
 kMinChar = 97 # 'a' in ASCII
 kAlphSize = 26 # English alphabet size
 
-class Vigenere:
+class VigenereFunctions:
     def encrypt(self, text, key):
         """
             Encrypts the given text using the Vigenere cipher with the provided key.
@@ -22,11 +22,6 @@ class Vigenere:
             - The function assumes that the input text and the key are in lowercase.
             - Non-alphabetic characters in the input text are not encrypted but are
               included in the output text in their original form.
-
-            Example usage:\n
-            >>> cipher = Vigenere()
-            >>> cipher.encrypt('hello world', key)
-            # Returns the encrypted text using the Vigenere cipher with the provided key.
             """
         output_text = ''
         key_index = 0
@@ -59,11 +54,6 @@ class Vigenere:
             - The function assumes that the input text and the key are in lowercase.
             - Non-alphabetic characters in the input text are not decrypted but are
               included in the output text in their original form.
-
-            Example usage:\n
-            >>> cipher = Vigenere()
-            >>> cipher.decrypt('hello world', key)
-            # Returns the decrypted text using the Vigenere cipher with the provided key.
             """
         output_text = ''
         key_index = 0

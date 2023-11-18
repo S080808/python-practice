@@ -1,4 +1,4 @@
-class Vernam:
+class VernamFunctions:
     def encrypt(self, text, key):
         """
             Encrypts the given text using the Vernam cipher with the specified key.

@@ -1,5 +1,5 @@
 alph_size = 26 # English alphabet size
-class Caesar:
+class CaesarFunctions:
     def encrypt(self, text, shift):
         """
          Encrypts the given text using the Caesar cipher with the specified shift.
@@ -22,11 +22,6 @@ class Caesar:
          - The function preserves the case of the alphabetic characters in the input text.
          - Non-alphabetic characters are not encrypted but are included in the output
            text in their original form.
-
-         Example usage:\n
-         >>> cipher = CaesarCipher()
-         >>> cipher.encrypt('Hello World', 3)
-         # Returns 'Khoor Zruog' after shifting each character in 'Hello World' by 3 positions.
          """
         output_text = ''
         for symbol in text:
@@ -65,12 +60,6 @@ class Caesar:
               are not counted in the frequency analysis.
             - The function only considers alphabetic characters and ignores all other
               types of characters.
-
-            Example usage:\n
-            >>> cipher = CaesarCipher()
-            >>> cipher.breaking('lqkp ogfke', 'e')
-            # Assuming 'e' is the most frequent letter, it identifies the shift and
-            # returns the decrypted text. It also writes 'ROT5' to 'key.txt'.
         """
         symbols = {}
         most_frequent_counter = 0

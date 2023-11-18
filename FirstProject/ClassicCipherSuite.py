@@ -1,6 +1,6 @@
-from Ciphers import VigenereMain
-from Ciphers import CaesarMain
-from Ciphers import VernamMain
+from Ciphers.VigenereMain import VigenereMenu
+from Ciphers.CaesarMain import CaesarMenu
+from Ciphers.VernamMain import VernamMenu
 from unit_tests import TestEncryptionProgram
 import sys
 def main_mode():
@@ -16,12 +16,16 @@ def main_mode():
     unit_tests.test_vernam_encrypt_decrypt()
     unit_tests.test_vernam_encrypt_decrypt()
 
+
     if mode == 'csr':
-        CaesarMain.caesar_menu(request, input_file, key_file, output_fyle)
+        menu = CaesarMenu()
+        menu.caesar_menu(request, input_file, key_file, output_fyle)
     elif mode == 'vgn':
-        VigenereMain.vigenere_menu(request, input_file, key_file, output_fyle)
+        menu = VigenereMenu()
+        menu.vigenere_menu(request, input_file, key_file, output_fyle)
     elif mode == 'vrn':
-        VernamMain.vernam_menu(request, input_file, key_file, output_fyle)
+        menu = VernamMenu()
+        menu.vernam_menu(request, input_file, key_file, output_fyle)
     else:
         print("Invalid input, try again!")
 
